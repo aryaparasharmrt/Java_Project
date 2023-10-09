@@ -8,3 +8,5 @@ public static void main (String args[]){
 
   System.out.print(result);
 }  
+
+public static int
