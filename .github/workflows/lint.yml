@@ -14,4 +14,8 @@ jobs:
         with:
           java-version: '11'  # Choose the appropriate Java version
           distribution: 'adopt'
-      
+
+      - name: Run Checkstyle
+        run: |
+          wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.44/checkstyle-8.44-all.jar
+          java -jar checkstyle-8.44-all.jar -c path/to/your/checkstyle.xml path/to/your/java/source/files
