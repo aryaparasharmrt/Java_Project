@@ -1,0 +1,19 @@
+name: Java Lint Check
+
+on: [push, pull_request]  # Trigger the workflow on pushes and pull requests
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2  # Checkout the code
+
+      - name: Set up JDK  # Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # Choose the appropriate Java version
+
+      - name: Run Checkstyle  # Execute Checkstyle
+        run: |
+          ./gradlew checkstyleMain  # Replace with the command specific to your project
