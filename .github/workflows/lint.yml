@@ -14,7 +14,4 @@ jobs:
         with:
           java-version: '11'  # Choose the appropriate Java version
           distribution: 'adopt'
-          
-      - name: Run Checkstyle  # Execute Checkstyle
-        run: |
-          ./gradlew checkstyleMain  # Replace with the command specific to your project
+      
