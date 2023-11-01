@@ -10,6 +10,7 @@ public static void main (String args[]){
   System.out.print(result);
 }  
 
+//Function to add two numbers
 public static int add(int a, int b) {
   int num1 = a;
   int num2 = b;
