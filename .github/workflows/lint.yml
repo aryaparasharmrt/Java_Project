@@ -1,17 +1,27 @@
-name: Java Lint Check
+name: Java Code Linting
 
-on: [push, pull_request]  # Trigger the workflow on pushes and pull requests
+on:
+  push:
+    branches:
+      - main # Replace 'main' with your default branch
 
 jobs:
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2  # Checkout the code
+      - name: Check out code
+        uses: actions/checkout@v2
 
-      - name: Set up JDK  # Set up Java
+      - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Choose the appropriate Java version
-          distribution: 'adopt'
-      
+          java-version: '11' # Change to your desired Java version
+
+      - name: Run Linter
+        run: |
+          # Replace 'lint-command' with your actual linting command (e.g., Checkstyle, PMD, SpotBugs)
+          # This is just an example, you should replace it with the actual command you use for linting.
+          ./gradlew lint-command
+
+      # Add additional steps if needed, such as sending notifications or storing the linting results
