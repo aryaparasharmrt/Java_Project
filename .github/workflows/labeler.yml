@@ -1,0 +1,42 @@
+name: Pull Request Labeler
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Assign Labels
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = [];
+            const title = context.payload.pull_request.title.toLowerCase();
+            const body = context.payload.pull_request.body.toLowerCase();
+            const author = context.payload.pull_request.user.login;
+            // Define your label assignment logic here
+            // Example: Assign labels based on keywords in the PR title or body
+            if (title.includes('bug') || body.includes('fix')) {
+              labels.push('bug');
+            }
+            if (title.includes('feature') || body.includes('feature')) {
+              labels.push('feature');
+            }
+            if (author === 'username') {
+              labels.push('author-label');
+            }
+            if (labels.length > 0) {
+              await github.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: labels
+              });
+            }
