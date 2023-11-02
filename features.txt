@@ -1,0 +1,3 @@
+Features:
+1. In app, Map Integration can be added which will help to find minimum distance between two friends.
+2. Swiping profile right or left.
