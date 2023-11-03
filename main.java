@@ -10,6 +10,15 @@ public static void main (String args[]){
   System.out.print(result);
 }  
 
+//Fabonnaci Number
+public static int fabonnaci(int n) {
+    if(n == 0 || n == 1) {
+         return 1; 
+    }
+    return fabonnaci(n - 1) + fabnnaci(n - 2);
+}
+
+// Merge Sort
 public static int[] mergeSort(int[] arr, int left, int right) {
     if(left == right) {
       int[] res = new int[1];
