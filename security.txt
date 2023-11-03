@@ -1,0 +1,21 @@
+# SECURITY.TXT - Sample Security Policy for Example Crop
+
+Contact: mailto:security@example.com
+Contact:tel:+1234567890
+Encryption: https://example.com/pgp-key.txt
+
+# Acknowledgments and Hall of Fame
+Acknowledgments: https://example.com/hall-of-fame
+Acknowledgments: mailto:security-acknowledgments@example.com
+
+# Vulnerability Disclosure Policy
+Disclosure: Full
+Disclosure: https://example.com/diclosure-policy
+
+# Security Information
+Canonical: https://example.com/security.txt
+Policy: https://example.com/security-policy
+Hiring: https://example.com/careers/security-engineer
+
+# Terms and Conditions
+Terms: https://example.com/security-terms-and-conditions
