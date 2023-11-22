@@ -60,3 +60,14 @@ int[] arr = {3, 12, 44, 1, 2, 67, 0};
   System.out.print("Sorted Array -> ");
   print(sa)
 }
+//Function to calculate and display the sum 
+private static void displaysum(double num1, double num2) {
+  duble sum =mum1 + num2
+    }
+Function to calculate and display the difference
+  private static void displaydifference( double num1, double num2) {
+  system.out.println(difference: " + difference):
+     // function to calculate and display the quotent 
+    private static void displayQuotient(double num1, duble num2) {
+    if (num2 !=0)
+      
