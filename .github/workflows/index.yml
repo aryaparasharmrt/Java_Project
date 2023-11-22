@@ -1,0 +1,20 @@
+# This is a sample YAML file
+
+person:
+  name: John Doe
+  age: 30
+  address:
+    street: 123 Main St
+    city: Anytown
+    country: USA
+
+preferences:
+  hobbies:
+    - reading
+    - hiking
+    - coding
+  favorite_color: blue
+
+employment:
+  position: software engineer
+  company: TechCo Inc
