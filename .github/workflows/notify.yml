@@ -1,0 +1,19 @@
+name: Notify on High-Priority Issues
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check for High-Priority Label
+      run: |
+        if [[ $(jq -r '.label.name' $GITHUB_EVENT_PATH) == "high-priority" ]]; then
+          echo "This is a high-priority issue."
+          # Add your notification logic here
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
